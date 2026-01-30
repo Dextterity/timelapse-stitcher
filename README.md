@@ -10,8 +10,10 @@ Fill up MORE storage-space by transforming your wonderful pics into timelapse fi
 No FFmpeg knowledge required![^bignote]
 
 ## SCRIPTS:
-1. `make_filelist.py`        :    Generate FFmpeg concat file list from JPGs
-2. `render_timelapse.py`     :    Render timelapse video from FFmpeg concat file list 
+1. `make_filelist.py`
+    - Generate FFmpeg concat file list from JPGs
+3. `render_timelapse.py`
+    - Render timelapse video from FFmpeg concat file list 
 
 ## USAGE:
 in python terminal meeting requirements: `python make_filelist.py -h`
