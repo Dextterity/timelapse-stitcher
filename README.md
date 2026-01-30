@@ -3,14 +3,38 @@
 ## ABOUT
 Have you filled up all your hard drives with astro/aurora shoots? Yes!
 Have you at least kept settings and framing somewhat conistent? Yes!
-Are you an expert at ffmpeg? No?...  
+Are you an expert at FFmpeg? No?...  
 Then you're in the right place! 
 
 Fill up MORE storage-space by transforming your wonderful pics into timelapse films using this handy little python script[^1].  
-No ffmpeg knowledge required![^bignote]
+No FFmpeg knowledge required![^bignote]
 
+## SCRIPTS:
+1. `make_filelist.py`        :    Generate FFmpeg concat file list from JPGs
+2. `render_timelapse.py`     :    Render timelapse video from FFmpeg concat file list 
 
 ## USAGE:
+in python terminal meeting requirements: `python make_filelist.py -h`
+
+### Filelist 
+Full usage printout:
+```
+usage: make_filelist.py [-h] [--start START] [--end END] [--output OUTPUT] [--skip [SKIP ...]] directory
+
+Generate FFmpeg concat file list from JPGs (auto-detect naming style)
+
+positional arguments:
+  directory          Folder containing JPG images
+
+options:
+  -h, --help         show this help message and exit
+  --start START      Start number (DSCF number OR suffix counter)
+  --end END          End number (DSCF number OR suffix counter)
+  --output OUTPUT    Output concat file list name
+  --skip [SKIP ...]  Provide space-separated numbers to skip that range of DSCF files: 1 2 3 4
+```
+
+### TImelapse 
 
 in python terminal meeting requirements: `python render_timelapse.py -h`
 
@@ -77,16 +101,16 @@ Full usage printout:
     --clarity CLARITY     Micro-contrast via unsharp mask (0.2–0.4 safe)
     --boomerang
     --use-exif-date       Prefix output filename with EXIF date (YYYY-MM-DD)
-    --crf CRF             ffmpeg encoding eption - see ffmpeg docs for more
-    --preset PRESET       ffmpeg encoding eption - see ffmpeg docs for more
-    --dry-run             Print the final ffmpeg comand without executing
+    --crf CRF             FFmpeg encoding eption - see FFmpeg docs for more
+    --preset PRESET       FFmpeg encoding eption - see FFmpeg docs for more
+    --dry-run             Print the final FFmpeg comand without executing
     --verbose             For debugging perposes
   ```
 
-[^bignote]: You do need to have ffmpeg installed though:  
+[^bignote]: You do need to have FFmpeg installed though:  
 
     - Release full build recommended  
-    - Different builds could work, but I gyan is recommended: https://www.gyan.dev/ffmpeg/builds/  
-    - Credits & build used: `ffmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers`  
+    - Different builds could work, but I gyan is recommended: https://www.gyan.dev/FFmpeg/builds/  
+    - Credits & build used: `FFmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers`  
 
-[^1]: Really just a python wrapper to create ffmpeg calls (cos too lazy to learn ffmpeg lol).
+[^1]: Really just a python wrapper to create FFmpeg calls (cos too lazy to learn FFmpeg lol).
