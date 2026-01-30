@@ -112,7 +112,7 @@ Full usage printout:
 [^bignote]: You do need to have FFmpeg installed though:  
 
     - Release full build recommended  
-    - Different builds could work, but I gyan is recommended: https://www.gyan.dev/FFmpeg/builds/  
+    - Different builds could work, but I gyan is recommended: https://www.gyan.dev/ffmpeg/builds/  
     - Credits & build used: `FFmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers`  
 
 [^1]: Really just a python wrapper to create FFmpeg calls (cos too lazy to learn FFmpeg lol).
